@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 # Check if the virtual environment directory exists
 if [ ! -d "venv" ]; then
