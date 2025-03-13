@@ -12,6 +12,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          repository: SatireSage/apod-analyzer
+          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
       - name: Set up environment
         run: |
