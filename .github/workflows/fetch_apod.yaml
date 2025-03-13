@@ -1,0 +1,33 @@
+name: Fetch NASA APOD
+
+on:
+  schedule:
+    - cron: '0 * * * *' # Runs every hour
+  workflow_dispatch: # Allows manual trigger
+
+jobs:
+  fetch-apod:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up environment
+        run: |
+          make all
+          source activate.sh
+
+      - name: Run script
+        env:
+          NASA_API_KEY: ${{ secrets.NASA_API_KEY }}
+        run: python src/main.py
+
+      - name: Commit and push updated image (if changed)
+        run: |
+          # Force git to track apod/ even if it's in .gitignore
+          git add -f apod/apod.jpg
+
+          # Commit and push if there are changes
+          git diff --cached --quiet || (git commit -m "Update APOD image" && git push)
+
