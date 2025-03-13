@@ -1,4 +1,4 @@
-# NASA Astronomy Picture of the Day (APOD) Analyzer
+# NASA Astronomy Picture of the Day (APOD) Analyzer: [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=SatireSage/apod-analyzer&file=colour_palette.m)
 
 This flow automatically fetches NASA's Astronomy Picture of the Day (APOD) using a Raspberry Pi and GitHub Actions, then analyzes the image using MATLAB (or MATLAB Online).
 
@@ -10,7 +10,7 @@ This flow automatically fetches NASA's Astronomy Picture of the Day (APOD) using
 
 This integration showcases a seamless workflow between hardware, cloud automation, and analytical software.
 
-## APOD
+## Today's Picture:
 <p align="center">
   <a href="https://apod.nasa.gov/apod/">
     <img src="./apod/apod.jpg" alt="APOD" width="600" style="border-radius: 8px;">
