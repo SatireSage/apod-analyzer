@@ -26,4 +26,4 @@ title('Astronomy Picture of the Day (APOD)');
 subplot(1, 2, 2);
 paletteImage = reshape(palette, 1, [], 3) / 255; % Normalize to [0,1]
 imshow(paletteImage);
-title('APOD Colouur Palette');
+title('APOD Colour Palette');
