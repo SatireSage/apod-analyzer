@@ -14,7 +14,7 @@ using toolboxes such as the [Image Processing Toolbox](https://www.mathworks.com
 ## Today's Picture:
 <div align="center">
   <a href="https://apod.nasa.gov/apod/" target="_blank">
-    <img src="./apod/apod.jpg" alt="Astronomy Picture of the Day" width="600" />
+    <img src="./apod/apod.jpg?" alt="Astronomy Picture of the Day" width="600" />
   </a>
   <br>
   <em style="font-size: 18px; color: #555;">Astronomy Picture of the Day (APOD)</em>
