@@ -7,7 +7,7 @@ on:
 
 jobs:
   fetch-apod:
-    runs-on: ARM64
+    runs-on: Linux
 
     steps:
       - name: Checkout code
