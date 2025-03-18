@@ -17,15 +17,12 @@ jobs:
           ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
       - name: Set up environment
-        run: |
-          make all
+        run: make all
 
       - name: Run script
         env:
           NASA_API_KEY: ${{ secrets.NASA_API_KEY }}
-        run: |
-          source activate.sh
-          python src/main.py
+        run: ./venv/bin/python src/main.py
 
       - name: Commit and push updated image
         run: |
