@@ -19,12 +19,13 @@ jobs:
       - name: Set up environment
         run: |
           make all
-          source activate.sh
 
       - name: Run script
         env:
           NASA_API_KEY: ${{ secrets.NASA_API_KEY }}
-        run: python src/main.py
+        run: |
+          source activate.sh
+          python src/main.py
 
       - name: Commit and push updated image
         run: |
